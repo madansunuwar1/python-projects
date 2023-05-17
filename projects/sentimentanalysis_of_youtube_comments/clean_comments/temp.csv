@@ -1,0 +1,11 @@
+,comments,sentiments,clean_comments
+0,"how did you scrape or create the emotions list?
+i've been procrastonating going through the full oxford dictionary to create files like that but have struggled with motivation.
+props for making one of these complex ones.",,scrape create emotion list ive procrastonating go full oxford dictionary create file like struggle motivation prop make one complex one
+1,"Thank you! Where could I find another list of words? Basic emotions are 6, I'd like to focus on those, and to make it work for Mandarin too.",,thank could find another list word basic emotion 6 id like focus make work mandarin
+2,very informative videos but i really want to know how did you get the emotion list?,,informative video really want know get emotion list
+3,could have used rstrip as well for removing empty lines,,could use rstrip well remove empty line
+4,What if I want emotions in different languages?,,want emotion different language
+5,Can this be implemented in google colab??,,implement google colab
+6,Error on print line,,error print line
+7,"Sir, I had a problem while executing this code",,sir problem execute code

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SENTIMENT ANALYSIS OF YOUTUBE COMMENT</title>
+    <style>
+        body{
+            background-color:#b3b0b0;
+        }
+           
+        h1{
+            text-align: center;
+        }
+
+        #main{
+            margin-top: 1%;
+            margin-left: 24%;
+            margin-right: 23%;
+            padding: 15px;
+            border-radius: 25px;
+            width: 50%;
+            background-color: rgb(255, 255, 255);
+        }
+
+        #left{
+            float : left;
+            width : 49%;
+            height :150px;
+            border-radius: 15px;
+            background-color : pink;
+            margin-bottom : 15px;
+            overflow : hidden;
+        }
+
+        #right{
+            float : right;
+            width : 49%;
+            border-radius: 15px;
+            background-color : pink;
+            height :150px;
+            margin-bottom : 15px;
+        }
+
+        #comments{
+            clear: both;
+            width : 98%;
+            height : 400px;
+            padding : 8px;
+            border-radius: 15px;
+            background-color :pink;
+            overflow:scroll;
+        }
+
+        form{
+            margin-top : 30px;
+        }
+
+        #youtube_text{
+            margin-left: 1%;
+        
+        }
+        #youtube_url{
+            text-align: center;
+        }
+
+        #button{
+            background-color: orange;
+            border-color: orange;
+            margin-left:40%; 
+            margin-top:5%;
+            
+        }
+
+        p{
+            color:black;
+            margin-left: 10px;
+        }
+
+        h3{
+            margin-top : 10px;
+            color:black;
+            text-align: center;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>SENTIMENT ANALYSIS OF YOUTUBE COMMENT</h1>
+    <div id = "main">
+        <div id = "left">
+            <form method="POST">
+                <label for="youtube_url" id="youtube_text">Enter a YouTube URL:</label>
+                <input type="text" name="youtube_url" id="youtube_url" required>
+                <button type="submit" id = "button">Sentiment</button>
+                <br>
+                {% if url %}
+                <p> URL = {{url}}</p>
+                {% endif %}
+            </form>
+        </div>
+
+        <div id = "right">
+            <h3>Result</h3>
+            {% if length %}
+            <p>Total Comments : {{length}}</p>  
+            <p>Positive Comments : {{pos_count}}</p>  
+            <p>Negative Comments :{{neg_count}}</p> 
+            {% endif %}
+        </div>
+
+        <div id = 'comments'>
+            <h3 id = 'x'>Comments</h3>
+            {% if Sentiments %}
+            {% for x in range(0,length)%}
+            <p>{{x+1}}. {{Comments[x]}} : {{Sentiments[x]}}</p>
+            {% endfor %}
+            {% endif %}
+        </div>
+    </div>
+    
+</body>
+</html>
+
+
+    
